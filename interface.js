@@ -1,4 +1,4 @@
-import { div, compose, input, label } from './html'
+import { div, compose, input, label, button } from './html'
 import { css } from './css'
 import { call } from './actions'
 
@@ -24,13 +24,13 @@ function counter (value) {
 }
 
 function incrementButton () {
-  return div({
+  return button({
     onclick: call('increment')
   }, '+')
 }
 
 function decrementButton () {
-  return div({
+  return button({
     onclick: call('decrement')
   }, '-')
 }
@@ -39,10 +39,11 @@ function count (value) {
   return div({}, compose(
     label({
       'for': 'count_value'
-    }, 'Count: '),
+    }, `Count: ${value}`),
     input({
       'id': 'count_value',
-      'value': value
+      'value': value,
+      onkeyup: call('set_value')
     })
   ))
 }

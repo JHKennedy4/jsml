@@ -8,11 +8,9 @@ export function element (tag, attributes, content) {
   return `<${tag} ${attr(attributes)}>${content}</${tag}>`
 }
 
-/*
-List:
-https://developer.mozilla.org/en-US/docs/Glossary/Empty_element
-*/
 export function emptyElement (tag, attributes) {
+  // List of Empty Elements:
+  // - https://developer.mozilla.org/en-US/docs/Glossary/Empty_element
   return `<${tag} ${attr(attributes)} />`
 }
 
@@ -28,3 +26,6 @@ export function label (attributes, content) {
   return element('label', attributes, content)
 }
 
+export function button (attributes, content) {
+  return element('button', attributes, content)
+}
