@@ -5,20 +5,15 @@ In the JavaScript code executed in response to the event, this is bound to the H
 */
 
 /*
-  this function should return a
-  global function invoking an event
-  the event, element, and any bound data
+ 1. function that creates a new store
+ 2. store name serves as namespace for events bound to that store
+ 3. events trigger reducers (a la redux)
+ 4. when state is updated, re-render ui
 
-  Look at redux
-  but I just want to spit out a string
+ Qs:
+ should I subscribe to changes to the store at the lowest level possible? or just re-render everything?
 
-  allows the user to split out by data stores
-  event selects the appropriate reducer for that data store
-
-  nothing subscribes to changes to the store
-  instead, the stores are passed directly to the root ui function?
-
-  that seems messy
+ Goal: this should be performant enough to do javascipt animations
 */
 export function call (action, data_func) {
   return `${action}`
