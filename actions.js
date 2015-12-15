@@ -1,7 +1,8 @@
 /*
-Every HTML element has a set of attributes that allow for the execution of JavaScript when certain events happen. These attributes are called event attributes and are the name of the event prefixed by "on". For example, to execute JavaScript when a user clicks on the element, put the JavaScript in the onclick attribute.
+ event attributes are the name of the event prefixed by "on".
 
-In the JavaScript code executed in response to the event, this is bound to the HTML element and the Event object can be reached using the event variable in the scope of the attribute.
+ `this` is bound to the HTML element
+ the Event object can be reached using the event variable in the scope of the attribute.
 */
 
 /*
