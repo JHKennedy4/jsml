@@ -9,13 +9,13 @@
  1. function that creates a new store
  2. store name serves as namespace for events bound to that store
  3. events trigger reducers (a la redux)
- 4. when state is updated, re-render ui
+ 4. when state is updated, patch ui
 
  Qs:
  should I subscribe to changes to the store at the lowest level possible? or just re-render everything?
-
- Goal: this should be performant enough to do javascipt animations
 */
-export function call (action, data_func) {
-  return `${action}`
+export function willcall (action, data_func) {
+  return `function (${action}) { 
+
+  }()`
 }
